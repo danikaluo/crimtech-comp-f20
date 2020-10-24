@@ -19,7 +19,18 @@ let std_quotes = ["Patience you must have, my young padawan.",
 "Difficult to see. Always in motion is the future."
 ];
 
+var random_images_array = ['cute-dark.jpg','cute-force.jpg','cute-std.jpg','regular-dark.jpg','regular-force.jpg', 'regular-std.jpg'] 
+function getRandomImage(imgAr) {
+    var num = Math.floor( Math.random() * imgAr.length );
+    var img = imgAr[ num ];
+    return 'img/'+img
+}
+
+
 function respond() {
     // Your Code Here
     console.log("Hello World!");
+    console.log(document.getElementById("par"));
+    document.getElementById("par").innerHTML = std_quotes[Math.floor(Math.random() * std_quotes.length)];
+    document.getElementById("image").src= getRandomImage(random_images_array);
 }

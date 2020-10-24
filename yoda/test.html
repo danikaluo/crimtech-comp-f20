@@ -5,11 +5,28 @@
 </head>
 
 <body>
-	<script>
-		console.log("Try adding \"console.log('Hello World!');\" to test.html!");
-		console.log("Hello World");
+	<script>		
+		console.log("You found me!");
 		var y = "hello";
 		console.log(y);
 		console.log(y.includes("hello"));
+		console.log(y.repeat(10));
+        function square(i) {
+			if (typeof i != "number") {
+				return -1
+			}
+			return i*i
+        }
+
+        function numberString(i) {
+            if (typeof i == "number" && i > 0) {
+				x = ""
+				for (a = 1; a < i + 1; a++) {
+					x += a
+				}
+			}
+            return x
+        }
+		
 	</script>
 </body>
